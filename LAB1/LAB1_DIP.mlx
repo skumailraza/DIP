@@ -19,9 +19,15 @@ subplot(1,2,2), subimage(X2,map2)
 imagesc(X);
 
 % Colormap scaling
-
 clims = [4 18];
 imagesc(X,clims);
+
+% Colormap Green
+[X,map] = imread('corn.tif');
+imshow(X,map)
+newmap = map;
+newmap(:,1) = 0;
+colormap(gca,newmap)
 
 % RGB Split
 img = imread('image.png'); 	% Read image
