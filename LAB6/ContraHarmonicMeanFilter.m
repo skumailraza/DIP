@@ -17,7 +17,7 @@ function c = ContraHarmonicMeanFilter(data,masksize,Q)
 %masksize=3;
 
 % Order of the filter
-Q=-2;
+Q=2;
 sumn=[];
 sumd=[];
 %figure,imshow(data)

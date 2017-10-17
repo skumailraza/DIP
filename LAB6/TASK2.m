@@ -18,7 +18,7 @@ subplot(8,2,2), imshow(pimg),title('Poisson Noise');
 
 % Salt & Pepper
 snpimg = imnoise(img, 'salt & pepper',0.1);
-subplot(2,3,3), imshow(spimg),title('Salt & Pepper Noise');
+subplot(2,3,3), imshow(snpimg),title('Salt & Pepper Noise');
 
 % Speckle Noise
 spimg = imnoise(img, 'speckle', 0.01);
@@ -89,23 +89,23 @@ subplot(2,3,6),imshow(pepperimg_geo_mean,[]),title('Poisson ');
 
 % Harmonic mean
 figure
-gout = Harmonic_mean_filter(gimg, 7);
-subplot(2,3,1),imshow(gout,[]),title('Harmonic Gaussian Mean Filter');
+gout = Harmonic_mean_filter(gimg, 3);
+subplot(2,3,1),imshow(gout,[]),title('Harmonic Gaussian ');
 
-pout = Harmonic_mean_filter(pimg, 7);
-subplot(2,3,2),imshow(pout,[]),title('Poisson Filter');
+pout = Harmonic_mean_filter(pimg, 3);
+subplot(2,3,2),imshow(pout,[]),title('Poisson ');
 
-snpout = Harmonic_mean_filter(snpimg, 7);
-subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper Filter');
+snpout = Harmonic_mean_filter(snpimg, 3);
+subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper ');
 
-spout = Harmonic_mean_filter(spimg, 7);
-subplot(2,3,4),imshow(spout,[]),title('Speckle Filter');
+spout = Harmonic_mean_filter(spimg, 3);
+subplot(2,3,4),imshow(spout,[]),title('Speckle ');
 
-saltout = Harmonic_mean_filter(saltimg, 7);
-subplot(2,3,5),imshow(saltout,[]),title('Salt  Filter');
+saltout = Harmonic_mean_filter(saltimg, 3);
+subplot(2,3,5),imshow(saltout,[]),title('Salt  ');
 
-pepperout = Harmonic_mean_filter(pepperimg, 7);
-subplot(2,3,6),imshow(pepperout,[]),title('Pepper  Filter');
+pepperout = Harmonic_mean_filter(pepperimg, 3);
+subplot(2,3,6),imshow(pepperout,[]),title('Pepper  ');
 % 
 % ContraHarmonic -1
 figure
@@ -116,16 +116,16 @@ spout = ContraHarmonicMeanFilter(spimg,3,-1);
 saltout = ContraHarmonicMeanFilter(saltimg,3,-1);
 pepperout = ContraHarmonicMeanFilter(pepperimg,3,-1);
 
-subplot(2,3,1),imshow(gout,[]),title('Contra Harmonic -1 Gaussian Filter');
+subplot(2,3,1),imshow(gout,[]),title('Contra Harmonic -1 Gaussian  ');
 
-subplot(2,3,2),imshow(pout,[]),title('Poisson Filter');
+subplot(2,3,2),imshow(pout,[]),title('Poisson  ');
 
-subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper Filter');
+subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper  ');
 
-subplot(2,3,4),imshow(spout,[]),title('Speckle Filter');
+subplot(2,3,4),imshow(spout,[]),title('Speckle  ');
 
-subplot(2,3,5),imshow(saltout,[]),title('Salt  Filter');
-subplot(2,3,6),imshow(pepperout,[]),title('Pepper  Filter');
+subplot(2,3,5),imshow(saltout,[]),title('Salt   ');
+subplot(2,3,6),imshow(pepperout,[]),title('Pepper   ');
 
 % ContraHarmonic 1
 figure
@@ -136,16 +136,16 @@ spout = ContraHarmonicMeanFilter(spimg,3,1);
 saltout = ContraHarmonicMeanFilter(saltimg,3,1);
 pepperout = ContraHarmonicMeanFilter(pepperimg,3,1);
 
-subplot(2,3,1),imshow(gout,[]),title('Contra Harmonic 1 Gaussian Filter');
+subplot(2,3,1),imshow(gout,[]),title('Contra Harmonic 1 Gaussian  ');
 
-subplot(2,3,2),imshow(pout,[]),title('Poisson Filter');
+subplot(2,3,2),imshow(pout,[]),title('Poisson  ');
 
-subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper Filter');
+subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper  ');
 
-subplot(2,3,4),imshow(spout,[]),title('Speckle Filter');
+subplot(2,3,4),imshow(spout,[]),title('Speckle  ');
 
-subplot(2,3,5),imshow(saltout,[]),title('Salt  Filter');
-subplot(2,3,6),imshow(pepperout,[]),title('Pepper  Filter');
+subplot(2,3,5),imshow(saltout,[]),title('Salt   ');
+subplot(2,3,6),imshow(pepperout,[]),title('Pepper   ');
 
 
 % Min filter
@@ -157,16 +157,16 @@ spout = ordfilt2(spimg,1,ones(3,3));
 saltout = ordfilt2(saltimg,1,ones(3,3));
 pepperout = ordfilt2(pepperimg,1,ones(3,3));
 
-subplot(2,3,1),imshow(gout,[]),title('Min Filter: Gaussian Filter');
+subplot(2,3,1),imshow(gout,[]),title('Min Filter: Gaussian  ');
 
-subplot(2,3,2),imshow(pout,[]),title('Poisson Filter');
+subplot(2,3,2),imshow(pout,[]),title('Poisson  ');
 
-subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper Filter');
+subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper  ');
 
-subplot(2,3,4),imshow(spout,[]),title('Speckle Filter');
+subplot(2,3,4),imshow(spout,[]),title('Speckle  ');
 
-subplot(2,3,5),imshow(saltout,[]),title('Salt  Filter');
-subplot(2,3,6),imshow(pepperout,[]),title('Pepper  Filter');
+subplot(2,3,5),imshow(saltout,[]),title('Salt   ');
+subplot(2,3,6),imshow(pepperout,[]),title('Pepper   ');
 
 % Max Filter
 figure
@@ -177,16 +177,16 @@ spout = ordfilt2(spimg,9,ones(3,3));
 saltout = ordfilt2(saltimg,9,ones(3,3));
 pepperout = ordfilt2(pepperimg,9,ones(3,3));
 
-subplot(2,3,1),imshow(gout,[]),title('Max Filter: Gaussian Filter');
+subplot(2,3,1),imshow(gout,[]),title('Max Filter: Gaussian  ');
 
-subplot(2,3,2),imshow(pout,[]),title('Poisson Filter');
+subplot(2,3,2),imshow(pout,[]),title('Poisson  ');
 
-subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper Filter');
+subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper  ');
 
-subplot(2,3,4),imshow(spout,[]),title('Speckle Filter');
+subplot(2,3,4),imshow(spout,[]),title('Speckle  ');
 
-subplot(2,3,5),imshow(saltout,[]),title('Salt  Filter');
-subplot(2,3,6),imshow(pepperout,[]),title('Pepper  Filter');
+subplot(2,3,5),imshow(saltout,[]),title('Salt   ');
+subplot(2,3,6),imshow(pepperout,[]),title('Pepper   ');
 
 % Median Filter
 figure
@@ -197,15 +197,15 @@ spout = ordfilt2(spimg,5,ones(3,3));
 saltout = ordfilt2(saltimg,5,ones(3,3));
 pepperout = ordfilt2(pepperimg,5,ones(3,3));
 
-subplot(2,3,1),imshow(gout,[]),title('Medain Filter: Gaussian Filter');
+subplot(2,3,1),imshow(gout,[]),title('Medain Filter: Gaussian  ');
 
-subplot(2,3,2),imshow(pout,[]),title('Poisson Filter');
+subplot(2,3,2),imshow(pout,[]),title('Poisson  ');
 
-subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper Filter');
+subplot(2,3,3),imshow(snpout,[]),title('Salt & Pepper  ');
 
-subplot(2,3,4),imshow(spout,[]),title('Speckle Filter');
+subplot(2,3,4),imshow(spout,[]),title('Speckle  ');
 
-subplot(2,3,5),imshow(saltout,[]),title('Salt  Filter');
-subplot(2,3,6),imshow(pepperout,[]),title('Pepper Filter');
+subplot(2,3,5),imshow(saltout,[]),title('Salt   ');
+subplot(2,3,6),imshow(pepperout,[]),title('Pepper  ');
 
 
